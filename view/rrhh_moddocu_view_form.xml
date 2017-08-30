@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<form>
+    <separator string="Definicion de Modelo Carta Documento" colspan="4" id="fagrup"/>
+    <group colspan="4" col="2" id="group_docu_1">
+        <label name="cod_doc"/>
+        <field name="cod_doc"/>
+        <label name="observ"/>
+        <field name="observ"/>
+        <label name="des_doc"/>
+        <field name="des_doc"/>    
+    </group>
+</form>

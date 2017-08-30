@@ -1,0 +1,12 @@
+<tree string="Cursos y Capacitacion">
+    <field name="tcurso"/>
+    <field name="ncurso"/>
+    <field name="name2"/>    
+    <field name="fini"/>
+    <field name="ffin"/>
+    <field name="jus"/>
+    <field name="dias"/>
+    <field name="jusdes"/>    
+    <field name="ncertif"/>
+    <field name="notas"/>
+</tree>

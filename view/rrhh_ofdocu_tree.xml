@@ -1,0 +1,5 @@
+<tree string="Oficios y Cartas Documentos">
+    <field name="fecha"/>
+    <field name="toficio"/>
+    <field name="texto"/>    
+</tree>

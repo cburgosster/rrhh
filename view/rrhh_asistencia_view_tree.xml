@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="name"/>
+    <field name="modaviso"/>
+    <field name="tipo"/>
+    <field name="descripcion"/>
+    <field name="fecha_aviso"/>
+    <field name="fecha_desde"/>
+    <field name="fecha_hasta"/>        
+    <field name="dias"/>
+    <field name="fecha_justif"/>
+    <field name="justif_s"/>
+    <field name="justif_n"/>            
+    <field name="observaciones"/>
+    <field name="justif_photo1"/>
+    <field name="justif_photo2"/>
+</tree>

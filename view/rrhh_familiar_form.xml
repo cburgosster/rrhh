@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<form string="Grupo Familiar" col="4">
+    <label name="name1"/>
+    <field name="name1"/>
+    <label name="name2"/>
+    <field name="name2"/>
+    <label name="parentezco"/>
+    <field name="parentezco"/>
+    <label name="sexo"/>
+    <field name="sexo"/>
+    <label name="tdoc"/>
+    <field name="tdoc"/>
+    <label name="ndoc"/>
+    <field name="ndoc"/>
+    <label name="ndoc"/>
+    <field name="ndoc"/>
+    <label name="falta"/>
+    <field name="falta"/>
+    <label name="fbaja"/>
+    <field name="fbaja"/>
+    <label name="fnac"/>
+    <field name="fnac"/>
+    <label name="telefono"/>
+    <field name="telefono"/>
+</form>

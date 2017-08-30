@@ -1,0 +1,13 @@
+<tree string="Grupo Familiar">
+    <field name="name1"/>
+    <field name="name2"/>
+    <field name="parentezco"/>
+    <field name="sexo"/>
+    <field name="tdoc"/>
+    <field name="ndoc"/>
+    <field name="ndoc"/>
+    <field name="falta"/>
+    <field name="fbaja"/>
+    <field name="fnac"/>
+    <field name="telefono"/>
+</tree>

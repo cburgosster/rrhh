@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<form string="ABM Datos Basicos de Legajo" col="6">
+    <label name="name"/>
+    <field name="name" xexpand="1"/>
+    <label name="lastname"/>
+    <field name="lastname"/>
+    <label name="code"/>
+    <field name="code"/>
+    <group colspan="4" col="4" id="group_party_doc">
+        <field name="documents" height="130" yexpand="0" mode="form,tree" colspan="4"/>
+    </group>
+<!--
+    <label name="beca"/>
+    <field name="beca"/>
+-->
+    <notebook colspan="6">
+        <page string="Particulares" id="party_gnuhealth">
+            <group colspan="4" id="person_details">
+                <group id="person_demographics" string="Datos personales">
+<!--
+                    <label name="ref"/>
+                    <field name="ref"/>
+-->
+                    <label name="dob"/>
+                    <field name="dob"/>
+                    <label name="sex"/>
+                    <field name="sex"/>
+<!--
+                    <label name="marital_status"/>
+                    <field name="marital_status"/>
+                    <label name="du"/>
+                    <field name="du"/>
+                    <label name="citizenship"/>
+                    <field name="citizenship"/>
+                    <label name="residence"/>
+                    <field name="residence"/>
+                    <label name="ethnic_group"/>
+                    <field name="ethnic_group"/>
+                    <label name="alternative_identification"/>
+                    <field name="alternative_identification"/>
+                    <label name="unidentified"/>
+                    <field name="unidentified"/>
+-->
+                </group>
+                <group string="Picture" id="person_picture">
+                    <field xfill="0" xexpand="1" name="photo" img_width="200" img_height="200" height="200" width="200" widget="image"/>
+                </group>
+                <newline/>
+            </group>
+            <newline/>
+            <group col="6" colspan="2" id="other_party_specs">
+<!--
+                <label name="activation_date"/>
+                <field name="activation_date"/>
+-->
+                <label name="internal_user"/>
+                <field name="internal_user"/>
+            </group>
+            <newline/>
+<!--
+            <field name="insurance" colspan="4"/>
+-->
+        </page>
+        <page string="General" id="general">
+            <field name="addresses" mode="form,tree" colspan="4"
+                view_ids="party.address_view_form,party.address_view_tree_sequence"/>
+<!--
+            <field name="contact_mechanisms" colspan="2"
+                view_ids="party.contact_mechanism_view_tree_sequence"/>
+-->
+        </page>
+<!--
+        <page string="Becas" id="becas_page" states="{'invisible': Not(Bool(Eval('beca')))}">
+            <field name="becas"/>
+        </page>
+-->
+    </notebook>
+    <group col="12" colspan="4" id="invisible"
+            states="{'invisible':True}">
+        <label name="is_person"/>
+        <field name="is_person"/>
+        <label name="is_patient"/>
+        <field name="is_patient"/>
+        <label name="is_healthprof"/>
+        <field name="is_healthprof"/>
+        <label name="is_institution"/>
+        <field name="is_institution"/>
+        <label name="is_insurance_company"/>
+        <field name="is_insurance_company"/>
+        <label name="is_pharmacy"/>
+        <field name="is_pharmacy"/>
+        <field name="vat_number"/>
+    </group>
+
+</form>

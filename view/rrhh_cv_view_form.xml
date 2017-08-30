@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<form>
+    <label name="estado_cv"/>
+    <field name="estado_cv"/>
+    <label name="nombre"/>
+    <field name="nombre"/>
+    <label name="fecha_presen"/>
+    <field name="fecha_presen"/>
+    <label name="edad_emple"/>
+    <field name="edad_emple"/>
+    <notebook>
+
+        <page string="Datos Personales" id="page_cv_1" col="6">
+            <group colspan="4" col="4" id="group_cv1">
+                <field xfill="0" xexpand="1" name="photo1" img_width="170"
+                img_height="170"  height="170" width="170" widget="image"/>
+            </group> 
+            <group colspan="4" col="4" id="group_cv2">
+                <separator string="Informacion Basica del Postulante" colspan="4" id="s_cv1"/> 
+                <label name="fecha_nac"/>
+                <field name="fecha_nac"/>
+                <label name="cuil"/>
+                <field name="cuil"/>
+                <label name="telefono"/>
+                <field name="telefono"/>
+                <label name="celular"/>
+                <field name="celular"/>
+                <label name="direccion"/>
+                <field name="direccion"/>
+                <label name="altura"/>
+                <field name="altura"/>
+                <label name="piso"/>
+                <field name="piso"/>
+                <label name="dto"/>
+                <field name="dto"/>
+                <label name="entrecalle"/>
+                <field name="entrecalle"/>
+                <label name="localidad"/>
+                <field name="localidad"/>
+                <label name="email"/>
+                <field name="email"/>                
+            </group> 
+        </page>
+
+        <page string="A Cubrir Sector" id="page_cv_2" col="4">
+            <group colspan="4" col="4" id="group_cv1">
+                <separator string="Informacion del Sector a Cubrir la Vacante" colspan="4" id="s_cv1"/> 
+                <label name="ccosto"/>
+                <field name="ccosto"/>
+                <label name="categoria"/>
+                <field name="categoria"/>
+                <label name="convenio"/>
+                <field name="convenio"/>
+                <label name="sueldo"/>
+                <field name="sueldo"/>
+                <label name="tliqui"/>
+                <field name="tliqui" widget='selection' width="20"/>
+                <label name="tip_tur"/>
+                <field name="tip_tur"/>
+                <label name="entrada"/>
+                <field name="entrada"/> 
+                <label name="salida"/>
+                <field name="salida"/>
+            </group> 
+        </page>
+
+        <page string="Observaciones" id="page_cv_3" col="4">
+            <separator string="Comentario" colspan="4" id="separator1"/>
+            <field name="observaciones" colspan='4'/>
+        </page>
+
+        <page string="Insercion de Imagenes" id="page_cv_4" col="4">
+            <separator string="Imagenes de CV/Cursos/titulos" colspan="4" id="separator2"/>
+            <field xfill="0" xexpand="1" name="cv_photo1" img_width="170" img_height="170" 
+            height="170" width="170" widget="image"/>
+            <field xfill="0" xexpand="1" name="cv_photo2" img_width="170" img_height="170" 
+            height="170" width="170" widget="image"/>
+            <field xfill="0" xexpand="1" name="cv_photo3" img_width="170" img_height="170" 
+            height="170" width="170" widget="image"/>
+        </page>
+
+        <page string="Evaluacion Recursos Humanos" id="page_cv_5" col="4">
+            <separator string="Comentario sobre Evaluacion" colspan="4" id="separator2"/>
+            <field name="evaluacion" colspan='4'/>
+        </page>
+
+        <page string="Preocupacional / Psicotecnico" id="page_cv_6" col="4">
+            <separator string="Comentario sobre Examenes" colspan="4" id="separator3"/>
+            <field name="otros" colspan='4'/>
+        </page>    
+    </notebook>
+
+</form>

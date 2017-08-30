@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<form string="Seguimiento de Evolucion de Accidentado" col="4">
+    <label name="fcontrol"/>
+    <field name="fcontrol"/>
+    <label name="cmedico"/>
+    <field name="cmedico"/>
+    <label name="especialidad"/>
+    <field name="especialidad"/>
+    <label name="medico"/>
+    <field name="medico"/>
+    <label name="reposo"/>
+    <field name="reposo"/>
+</form>

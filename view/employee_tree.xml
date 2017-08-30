@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<data>
+    <xpath
+        expr="/tree/field[@name='company']" position="after">
+        <field name="edificio"/>
+        <field name="legajo"/>
+        <field name="active"/>
+    </xpath>
+</data>

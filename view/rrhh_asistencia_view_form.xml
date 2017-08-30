@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<form>
+    <label name="name"/>
+    <field name="name"/>
+    <group string='General' colspan="6" col="4" id="group_asis1">
+        <label name="modaviso"/>
+        <field name="modaviso" widget='selection'/>
+        <label name="tipo"/>
+        <field name="tipo" widget='selection'/>
+        <label name="fecha_aviso"/>
+        <field name="fecha_aviso"/>
+        <label name="descripcion"/>
+        <field name="descripcion"/>
+    </group>         
+    <group string='Detalle de Justicicacion' colspan="8" col="4" id="group_asis2">
+        <label name="fecha_desde"/>
+        <field name="fecha_desde"/>
+        <label name="fecha_hasta"/>
+        <field name="fecha_hasta"/>        
+        <label name="dias"/>
+        <field name="dias"/>
+        <label name="fecha_justif"/>
+        <field name="fecha_justif"/> 
+        <label name="justif_s"/>
+        <field name="justif_s"/>
+        <label name="justif_n"/>
+        <field name="justif_n"/>        
+    </group>
+    <notebook>
+        <!-- 1 Solapa - Descripcion -->
+        <page string="Observaciones" id="page_cv_solapa1_id" col="4">
+            <separator string="Notas adicionales" colspan="4" id="separator1"/> 
+            <field name="observaciones"/>
+        </page>
+
+        <!-- 2 Solapa - Descripcion -->
+        <page string="Insercion de Imagenes" id="page_cv_isolapa2_id" col="4">
+            <separator string="Imagenes de Justificacion" colspan="4" id="separator2"/>
+            <field xfill="0" xexpand="1" name="justif_photo1" img_width="170" img_height="170" 
+            height="170" width="170" widget="image"/>
+            <field xfill="0" xexpand="1" name="justif_photo2" img_width="170" img_height="170" 
+            height="170" width="170" widget="image"/>
+            <field xfill="0" xexpand="1" name="justif_photo3" img_width="170" img_height="170" 
+            height="170" width="170" widget="image"/>
+        </page>
+    </notebook> 
+</form>

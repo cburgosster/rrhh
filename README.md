@@ -1,2 +1,0 @@
-# rrhh
-RRHH

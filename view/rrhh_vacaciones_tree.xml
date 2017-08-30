@@ -1,0 +1,9 @@
+<tree string="Vacaciones y Creditos">
+    <field name="vano"/>
+    <field name="vinicio"/>
+    <field name="vfin"/>
+    <field name="vretoma"/>
+    <field name="vdias"/>
+    <field name="vplus"/>
+    <field name="vcredito"/>
+</tree>

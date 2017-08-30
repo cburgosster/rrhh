@@ -1,0 +1,7 @@
+<tree string="Grupo Familiar">
+    <field name="fcontrol"/>
+    <field name="cmedico"/>
+    <field name="especialidad"/>
+    <field name="medico"/>
+    <field name="reposo"/>
+</tree>

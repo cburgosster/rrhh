@@ -1,0 +1,11 @@
+<tree string="Indumentaria / Tarjetas Alpi">
+    <field name="tarje_magne"/>
+    <field name="tarje_alpimas"/>
+    <field name="calzado"/>
+    <field name="camisa"/>
+    <field name="pantalon"/>
+    <field name="remera"/>
+    <field name="delantal"/>
+    <field name="chaleco"/>
+    <field name="faja"/>
+</tree>

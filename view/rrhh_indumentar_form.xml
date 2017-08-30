@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<form string="Indumentaria / Tarjetas Alpi" col="4">
+    <label name="tarje_magne"/>
+    <field name="tarje_magne"/>
+    <label name="tarje_alpimas"/>
+    <field name="tarje_alpimas"/>
+    <label name="camisa"/>
+    <field name="camisa"/>
+    <label name="pantalon"/>
+    <field name="pantalon"/>
+    <label name="remera"/>
+    <field name="remera"/>
+    <label name="delantal"/>
+    <field name="delantal"/>
+    <label name="chaleco"/>
+    <field name="chaleco"/>
+    <label name="faja"/>
+    <field name="faja"/>
+    <label name="calzado"/>
+    <field name="calzado"/>
+</form>

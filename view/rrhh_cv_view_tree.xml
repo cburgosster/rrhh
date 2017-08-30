@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="estado_cv"/>
+    <field name="nombre"/>
+    <field name="fecha_presen"/>
+    <field name="fecha_nac"/>
+    <field name="cuil"/>
+    <field name="telefono"/>
+    <field name="celular"/> 
+    <field name="direccion"/>
+    <field name="altura"/>
+    <field name="piso"/>
+    <field name="dto"/>
+    <field name="entrecalle"/>
+    <field name="localidad"/>
+    <field name="email"/>    
+    <field name="ccosto"/>
+    <field name="categoria"/>
+    <field name="convenio"/>
+    <field name="sueldo"/>
+    <field name="tliqui"/>
+    <field name="tip_tur"/>
+    <field name="entrada"/>
+    <field name="salida"/>
+    <field name="observaciones"/>
+    <field name="cv_photo1"/>
+    <field name="cv_photo2"/>
+    <field name="cv_photo2"/>    
+</tree>

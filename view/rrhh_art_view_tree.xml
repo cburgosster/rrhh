@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="legajo"/>
+    <field name="name"/>
+    <field name="siniestro"/>
+    <field name="fechaacc"/>
+    <field name="fechaalta"/>
+    <field name="dias_acc"/>
+</tree>

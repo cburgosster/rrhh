@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<form string="Cusos y Capacitacion de EMpleado" col="4">
+    <label name="tcurso"/>
+    <field name="tcurso"/>
+    <label name="ncurso"/>
+    <field name="ncurso"/>
+    <label name="name2"/>
+    <field name="name2"/>    
+    <label name="fini"/>
+    <field name="fini"/>
+    <label name="ffin"/>
+    <field name="ffin"/>
+    <label name="jus"/>
+    <field name="jus"/>
+    <label name="dias"/>
+    <field name="dias"/>
+    <label name="jusdes"/>
+    <field name="jusdes"/>    
+    <label name="ncertif"/>
+    <field name="ncertif"/>
+    <label name="notas"/>
+    <field name="notas"/>
+</form>

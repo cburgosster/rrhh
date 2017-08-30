@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<form>
+    <separator string="Obra Social de Empleado" colspan="4" id="flaboral"/>
+    <group colspan="2" col="2" id="group_labo_1">
+        <label name="cod_ob"/>
+        <field name="cod_ob"/>
+        <label name="descripcion"/>
+        <field name="descripcion"/>    
+    </group>
+</form>

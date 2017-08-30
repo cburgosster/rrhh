@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<form>
+    <separator string="Definicion de Modelo Horarios" colspan="4" id="fagrup"/>
+    <group colspan="4" col="2" id="group_hor_1">
+        <label name="cod_hor"/>
+        <field name="cod_hor"/>
+        <label name="tip_tur"/>
+        <field name="tip_tur"/>        
+        <label name="des_hor"/>
+        <field name="des_hor"/>
+        <label name="entrada"/>
+        <field name="entrada"/>
+        <label name="salida"/>
+        <field name="salida"/>
+    </group>
+</form>

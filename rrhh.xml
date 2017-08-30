@@ -1,0 +1,532 @@
+<tryton>
+    <data>
+ 
+    <!--  Personal ABM Legajos  -->    
+        <record model="ir.ui.view" id="employee_view_form2">
+            <field name="model">company.employee</field>
+            <field name="type">form</field>
+            <field name="inherit" ref="company.employee_view_form"/>
+            <field name="name">employee_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="employee_view_tree2">
+            <field name="model">company.employee</field>
+            <field name="type">tree</field>
+            <field name="inherit" ref="company.employee_view_tree"/>
+            <field name="name">employee_tree</field>
+        </record>
+
+
+    <!--    'Party for patient' -->
+        <record model="ir.ui.view" id="view_party_form4">
+            <field name="model">party.party</field>
+            <field name="type">form</field>
+            <field name="name">view_party_form4</field>
+        </record>
+        <record model="ir.ui.view" id="party_view_tree4">
+            <field name="model">party.party</field>
+            <field name="type">tree</field>
+            <field name="name">party_tree4</field>
+        </record>
+
+ 
+      <!-- Create the GNU HEALTH icon -->
+        <record model="ir.ui.icon" id="gnuhealth_icon">
+            <field name="name">gnuhealth</field>
+            <field name="path">tryton-clock.svg</field>
+        </record>
+
+        <menuitem name='Recursos Humanos'  id="menu_rrhh_id"/>
+
+
+        <!-- ****** Menu Legajos ****************************************************************** -->
+        <menuitem name='Config Tablas'  
+            id="menu_rrhh_sub" parent="menu_rrhh_id"/>      
+
+        <menuitem name='Legajos' action="company.act_employee_form"
+            id="menu_irrhh_id"  parent="menu_rrhh_id"/>
+        <!-- *******************************************************************************************-->
+
+
+        <!-- ****** Menu Asistencia *************************************************************** -->
+        <record model="ir.ui.view" id="rrhh_asistencia_form_id">
+            <field name="model">rrhh.asistencia</field>
+            <field name="type">form</field>
+            <field name="name">rrhh_asistencia_view_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="rrhh_asistencia_tree_id">
+            <field name="model">rrhh.asistencia</field>
+            <field name="type">tree</field>
+            <field name="name">rrhh_asistencia_view_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="rrhh_asistencia_view">
+            <field name="name">Justificaciones / Inasistencias</field>
+            <field name="res_model">rrhh.asistencia</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_asistencia_tree1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_asistencia_tree_id"/>
+            <field name="act_window" ref="rrhh_asistencia_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_asistencia_form1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_asistencia_form_id"/>
+            <field name="act_window" ref="rrhh_asistencia_view"/>
+        </record>
+
+        <menuitem name='Justificaciones' action="rrhh_asistencia_view"
+            id="menu_rrhh_asistencia_id" parent="menu_rrhh_id"/>
+        <!-- *******************************************************************************************-->
+
+        
+         <!-- ****** Menu Justificaciones ********************************************************** -->
+        <record model="ir.ui.view" id="rrhh_justif_form_id">
+            <field name="model">rrhh.justif</field>
+            <field name="type">form</field>
+            <field name="name">rrhh_justif_view_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="rrhh_justif_tree_id">
+            <field name="model">rrhh.justif</field>
+            <field name="type">tree</field>
+            <field name="name">rrhh_justif_view_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="rrhh_justif_view">
+            <field name="name">Conceptos de Justificaciones</field>
+            <field name="res_model">rrhh.justif</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_justif_tree1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_justif_tree_id"/>
+            <field name="act_window" ref="rrhh_justif_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_justif_form1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_justif_form_id"/>
+            <field name="act_window" ref="rrhh_justif_view"/>
+        </record>
+
+        <menuitem name='Conceptos Justificacion' action="rrhh_justif_view"
+            id="menu_rrhh_justif_id" parent="menu_rrhh_sub"/>
+        <!-- *******************************************************************************************-->
+        
+        <!-- ****** Menu Categorias ************************************************************** -->
+        <record model="ir.ui.view" id="rrhh_categ_form_id">
+            <field name="model">rrhh.categoria</field>
+            <field name="type">form</field>
+            <field name="name">rrhh_categ_view_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="rrhh_categ_tree_id">
+            <field name="model">rrhh.categoria</field>
+            <field name="type">tree</field>
+            <field name="name">rrhh_categ_view_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="rrhh_categ_view">
+            <field name="name">Conceptos de Categorias</field>
+            <field name="res_model">rrhh.categoria</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_categ_tree1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_categ_tree_id"/>
+            <field name="act_window" ref="rrhh_categ_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_categ_form1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_categ_form_id"/>
+            <field name="act_window" ref="rrhh_categ_view"/>
+        </record>
+
+        <menuitem name='Conceptos Categorias' action="rrhh_categ_view"
+            id="menu_rrhh_categ_id" parent="menu_rrhh_sub"/>
+        <!-- *******************************************************************************************-->
+        
+        <!-- ****** Menu Puestos ****************************************************************** -->
+        <record model="ir.ui.view" id="rrhh_puestos_form_id">
+            <field name="model">rrhh.puestos</field>
+            <field name="type">form</field>
+            <field name="name">rrhh_puestos_view_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="rrhh_puestos_tree_id">
+            <field name="model">rrhh.puestos</field>
+            <field name="type">tree</field>
+            <field name="name">rrhh_puestos_view_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="rrhh_puestos_view">
+            <field name="name">Conceptos de Puestos</field>
+            <field name="res_model">rrhh.puestos</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_puestos_tree1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_puestos_tree_id"/>
+            <field name="act_window" ref="rrhh_puestos_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_puestos_form1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_puestos_form_id"/>
+            <field name="act_window" ref="rrhh_puestos_view"/>
+        </record>
+
+        <menuitem name='Conceptos Puestos' action="rrhh_puestos_view"
+            id="menu_rrhh_puestos_id" parent="menu_rrhh_sub"/>
+        <!-- *******************************************************************************************-->        
+        
+        <!-- ****** Menu Documentos ************************************************************** -->
+        <record model="ir.ui.view" id="rrhh_moddocu_form_id">
+            <field name="model">rrhh.moddocu</field>
+            <field name="type">form</field>
+            <field name="name">rrhh_moddocu_view_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="rrhh_moddocu_tree_id">
+            <field name="model">rrhh.moddocu</field>
+            <field name="type">tree</field>
+            <field name="name">rrhh_moddocu_view_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="rrhh_moddocu_view">
+            <field name="name">Modelos de Documentos</field>
+            <field name="res_model">rrhh.moddocu</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_moddocu_tree1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_moddocu_tree_id"/>
+            <field name="act_window" ref="rrhh_moddocu_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_moddocu_form1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_moddocu_form_id"/>
+            <field name="act_window" ref="rrhh_moddocu_view"/>
+        </record>
+
+        <menuitem name='Modelos de Documentos' action="rrhh_moddocu_view"
+            id="menu_rrhh_moddocu_id" parent="menu_rrhh_sub"/>
+        <!-- *******************************************************************************************-->
+        
+        <!-- ****** Menu Sindicato ***************************************************************** -->
+        <record model="ir.ui.view" id="rrhh_sindicato_form_id">
+            <field name="model">rrhh.sindicato</field>
+            <field name="type">form</field>
+            <field name="name">rrhh_sindicato_view_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="rrhh_sindicato_tree_id">
+            <field name="model">rrhh.sindicato</field>
+            <field name="type">tree</field>
+            <field name="name">rrhh_sindicato_view_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="rrhh_sindicato_view">
+            <field name="name">sindicato</field>
+            <field name="res_model">rrhh.sindicato</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_sindicato_tree1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_sindicato_tree_id"/>
+            <field name="act_window" ref="rrhh_sindicato_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_sindicato_form1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_sindicato_form_id"/>
+            <field name="act_window" ref="rrhh_sindicato_view"/>
+        </record>
+
+        <menuitem name='Sindicato' action="rrhh_sindicato_view"
+            id="menu_rrhh_sindicato_id" parent="menu_rrhh_sub"/>
+        <!-- *******************************************************************************************--> 
+        
+        <!-- ****** Menu Obra Social ************************************************************** -->
+        <record model="ir.ui.view" id="rrhh_obrasoc_form_id">
+            <field name="model">rrhh.obrasoc</field>
+            <field name="type">form</field>
+            <field name="name">rrhh_obrasoc_view_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="rrhh_obrasoc_tree_id">
+            <field name="model">rrhh.obrasoc</field>
+            <field name="type">tree</field>
+            <field name="name">rrhh_obrasoc_view_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="rrhh_obrasoc_view">
+            <field name="name">Obra Social</field>
+            <field name="res_model">rrhh.obrasoc</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_obrasoc_tree1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_obrasoc_tree_id"/>
+            <field name="act_window" ref="rrhh_obrasoc_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_obrasoc_form1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_obrasoc_form_id"/>
+            <field name="act_window" ref="rrhh_obrasoc_view"/>
+        </record>
+
+        <menuitem name='Obra Social' action="rrhh_obrasoc_view"
+            id="menu_rrhh_obrasoc_id" parent="menu_rrhh_sub"/>
+        <!-- *******************************************************************************************-->         
+        
+        <!-- ****** Menu Horarios ***************************************************************** -->
+        <record model="ir.ui.view" id="rrhh_horarios_form_id">
+            <field name="model">rrhh.horarios</field>
+            <field name="type">form</field>
+            <field name="name">rrhh_horarios_view_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="rrhh_horarios_tree_id">
+            <field name="model">rrhh.horarios</field>
+            <field name="type">tree</field>
+            <field name="name">rrhh_horarios_view_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="rrhh_horarios_view">
+            <field name="name">Modelos de Horarios</field>
+            <field name="res_model">rrhh.horarios</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_horarios_tree1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_horarios_tree_id"/>
+            <field name="act_window" ref="rrhh_horarios_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_horarios_form1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_horarios_form_id"/>
+            <field name="act_window" ref="rrhh_horarios_view"/>
+        </record>
+
+        <menuitem name='Modelos de Horarios' action="rrhh_horarios_view"
+            id="menu_rrhh_horarios_id" parent="menu_rrhh_sub"/>
+        <!-- *******************************************************************************************-->        
+        
+        <!-- ****** Menu Curriculum Vitae ******************************************************** -->
+        <record model="ir.ui.view" id="rrhh_cv_form_id">
+            <field name="model">rrhh.cv</field>
+            <field name="type">form</field>
+            <field name="name">rrhh_cv_view_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="rrhh_cv_tree_id">
+            <field name="model">rrhh.cv</field>
+            <field name="type">tree</field>
+            <field name="name">rrhh_cv_view_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="rrhh_cv_view">
+            <field name="name">Curriculum Vitae</field>
+            <field name="res_model">rrhh.cv</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_cv_tree1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_cv_tree_id"/>
+            <field name="act_window" ref="rrhh_cv_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_cv_form1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_cv_form_id"/>
+            <field name="act_window" ref="rrhh_cv_view"/>
+        </record>
+
+        <menuitem name='Curriculum Vitae' action="rrhh_cv_view"
+            id="menu_rrhh_cv_id" parent="menu_rrhh_id"/>
+        <!-- *******************************************************************************************-->        
+
+
+        <!-- ****** Menu Evaluacion de Desempeño *********************************************** -->
+        <record model="ir.ui.view" id="rrhh_evalua_form_id">
+            <field name="model">rrhh.evalua</field>
+            <field name="type">form</field>
+            <field name="name">rrhh_evalua_view_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="rrhh_evalua_tree_id">
+            <field name="model">rrhh.evalua</field>
+            <field name="type">tree</field>
+            <field name="name">rrhh_evalua_view_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="rrhh_evalua_view">
+            <field name="name">Evaluacion Desempeno y Promociones</field>
+            <field name="res_model">rrhh.evalua</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_evalua_tree1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_evalua_tree_id"/>
+            <field name="act_window" ref="rrhh_evalua_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_evalua_form1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_evalua_form_id"/>
+            <field name="act_window" ref="rrhh_evalua_view"/>
+        </record>
+
+        <menuitem name='Evaluacion de Desempeno' action="rrhh_evalua_view"
+            id="menu_rrhh_evalua_id" parent="menu_rrhh_id"/>
+        <!-- ****************************************************************************************-->
+
+        <!-- ****** Menu Seguro ART ************************************************************ -->
+        <record model="ir.ui.view" id="rrhh_art_form_id">
+            <field name="model">rrhh.art</field>
+            <field name="type">form</field>
+            <field name="name">rrhh_art_view_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="rrhh_art_tree_id">
+            <field name="model">rrhh.art</field>
+            <field name="type">tree</field>
+            <field name="name">rrhh_art_view_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="rrhh_art_view">
+            <field name="name">Seguro ART - Accidentes</field>
+            <field name="res_model">rrhh.art</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_art_tree1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_art_tree_id"/>
+            <field name="act_window" ref="rrhh_art_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="rrhh_art_form1_id">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="rrhh_art_form_id"/>
+            <field name="act_window" ref="rrhh_art_view"/>
+        </record>
+
+        <menuitem name='Seguro ART' action="rrhh_art_view"
+            id="menu_rrhh_art_id" parent="menu_rrhh_id"/>
+        <!-- ****************************************************************************************-->
+
+
+        <menuitem name='Reportes' 
+            id="menu_rrhh_reporte"  parent="menu_rrhh_id" icon="tryton-print"/> 
+            <!-- action="rrhh_view" -->
+
+
+        <!-- *************** CURSOS y CAPACITACION *****************************************-->
+        <record model="ir.ui.view" id="rrhh_cursos_tree">
+            <field name="model">rrhh.cursos</field>
+            <field name="type">tree</field>
+            <field name="name">rrhh_cursos_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="rrhh_cursos_form">
+            <field name="model">rrhh.cursos</field>
+            <field name="type">form</field>
+            <field name="name">rrhh_cursos_form</field>
+        </record>
+        <!-- *******************************************************************************************-->        
+
+        <!-- *************** INDUMENTARIA ******************************************************-->
+        <record model="ir.ui.view" id="rrhh_indumentar_tree">
+            <field name="model">rrhh.indumentaria</field>
+            <field name="type">tree</field>
+            <field name="name">rrhh_indumentar_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="rrhh_indumentar_form">
+            <field name="model">rrhh.indumentaria</field>
+            <field name="type">form</field>
+            <field name="name">rrhh_indumentar_form</field>
+        </record>
+        <!-- *******************************************************************************************-->  
+        
+        <!-- *************** HORARIOS ************************************************************-->
+        <record model="ir.ui.view" id="rrhh_horariosleg_tree">
+            <field name="model">rrhh.horarioslegajo</field>
+            <field name="type">tree</field>
+            <field name="name">rrhh_horariosleg_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="rrhh_horariosleg_form">
+            <field name="model">rrhh.horarioslegajo</field>
+            <field name="type">form</field>
+            <field name="name">rrhh_horariosleg_form</field>
+        </record>
+        <!-- *******************************************************************************************--> 
+        
+        <!-- *************** FAMILIARES ************************************************************-->
+        <record model="ir.ui.view" id="rrhh_familiar_tree">
+            <field name="model">rrhh.familiares</field>
+            <field name="type">tree</field>
+            <field name="name">rrhh_familiar_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="rrhh_familiar_form">
+            <field name="model">rrhh.familiares</field>
+            <field name="type">form</field>
+            <field name="name">rrhh_familiar_form</field>
+        </record>
+        <!-- *******************************************************************************************-->
+        
+        <!-- *************** EVOLUCION DE ART-ACCIDENTE *************************************-->
+        <record model="ir.ui.view" id="rrhh_artevo_tree">
+            <field name="model">rrhh.artevo</field>
+            <field name="type">tree</field>
+            <field name="name">rrhh_artevo_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="rrhh_artevo_form">
+            <field name="model">rrhh.artevo</field>
+            <field name="type">form</field>
+            <field name="name">rrhh_artevo_form</field>
+        </record>
+        <!-- ******************************************************************************************-->
+
+        <!-- *************** OFICIOS y CARTAS DOCUMENTOS **********************************-->
+        <record model="ir.ui.view" id="rrhh_ofdocu_tree">
+            <field name="model">rrhh.ofdocu</field>
+            <field name="type">tree</field>
+            <field name="name">rrhh_ofdocu_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="rrhh_ofdocu_form">
+            <field name="model">rrhh.ofdocu</field>
+            <field name="type">form</field>
+            <field name="name">rrhh_ofdocu_form</field>
+        </record>
+        <!-- *******************************************************************************************-->   
+
+        <!-- *************** VACACIONES Y CREDITOS****************************************-->
+        <record model="ir.ui.view" id="rrhh_vacaciones_tree">
+            <field name="model">rrhh.vacaciones</field>
+            <field name="type">tree</field>
+            <field name="name">rrhh_vacaciones_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="rrhh_vacaciones_form">
+            <field name="model">rrhh.vacaciones</field>
+            <field name="type">form</field>
+            <field name="name">rrhh_vacaciones_form</field>
+        </record>
+        <!-- *******************************************************************************************-->   
+
+    </data>
+</tryton>

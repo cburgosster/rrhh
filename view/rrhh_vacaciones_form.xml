@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<form string="Vacaciones y Creditos" col="4">
+    <label name="vano"/>
+    <field name="vano"/>
+    <label name="vinicio"/>
+    <field name="vinicio"/>
+    <label name="vfin"/>
+    <field name="vfin"/>
+    <label name="vretoma"/>
+    <field name="vretoma"/>
+    <label name="vdias"/>
+    <field name="vdias"/>
+    <label name="vplus"/>
+    <field name="vplus"/>
+    <label name="vcredito"/>
+    <field name="vcredito"/>
+</form>

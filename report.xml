@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <!-- Reporte modelo1  -->
+        <record model="ir.action.report" id="report_rrhh1">
+			<field name="name">Reporte General de Empleados</field>
+            <field name="model">company.employee</field>   	<!-- Base Datos SQL  -->
+            <field name="report_name">rrhh.report1</field>  		<!-- Nombre Reporte  -->
+            <field name="report">rrhh/report/reporte1.ods</field>
+            <field name="style"></field>
+            <field name="extension"></field>
+            <field name="direct_print">False</field>
+        </record>
+        <record model="ir.action.keyword" id="print_keyword1">
+            <field name="keyword">form_print</field>
+            <field name="model">company.employee,-1</field>  <!-- 2 Opcion del Reporte  --> 
+            <field name="action" ref="report_rrhh1"/>
+        </record>
+
+        <!-- Reporte modelo2  -->
+        <record model="ir.action.report" id="report_rrhh2">
+			<field name="name">Reporte Categoria/Funciones</field>
+            <field name="model">company.employee</field>   	<!-- Base Datos SQL  -->
+            <field name="report_name">rrhh.report2</field>  		<!-- Nombre Reporte  -->
+            <field name="report">rrhh/report/reporte2.ods</field>
+            <field name="style"></field>
+            <field name="extension"></field>
+            <field name="direct_print">False</field>
+        </record>
+        <record model="ir.action.keyword" id="print_keyword2">
+            <field name="keyword">form_print</field>
+            <field name="model">company.employee,-1</field>  <!-- 1 Opcion del Reporte  --> 
+            <field name="action" ref="report_rrhh2"/>
+        </record>
+
+        <!-- Reporte modelo3  -->
+        <record model="ir.action.report" id="report_rrhh3">
+			<field name="name">Indumentaria Personal</field>
+            <field name="model">company.employee</field>   	<!-- Base Datos SQL  -->
+            <field name="report_name">rrhh.report3</field>   		<!-- Nombre Reporte  -->
+            <field name="report">rrhh/report/reporte3.ods</field>
+            <field name="style"></field>
+            <field name="extension"></field>
+            <field name="direct_print">False</field>
+        </record>
+        <record model="ir.action.keyword" id="print_keyword3">
+            <field name="keyword">form_print</field>
+            <field name="model">company.employee,-1</field>  <!-- 3 Opcion del Reporte  --> 
+            <field name="action" ref="report_rrhh3"/>
+        </record>
+        
+        <!-- Reporte modelo4  -->
+        <record model="ir.action.report" id="report_rrhh4">
+			<field name="name">Reporte General Vacaciones</field>
+            <field name="model">company.employee</field>   	<!-- Base Datos SQL  -->
+            <field name="report_name">rrhh.report4</field>   		<!-- Nombre Reporte  -->
+            <field name="report">rrhh/report/reporte4.ods</field>
+            <field name="style"></field>
+            <field name="extension"></field>
+            <field name="direct_print">False</field>
+        </record>
+        <record model="ir.action.keyword" id="print_keyword4">
+            <field name="keyword">form_print</field>
+            <field name="model">company.employee,-1</field>  <!-- 4 Opcion del Reporte  --> 
+            <field name="action" ref="report_rrhh4"/>
+        </record>        
+
+        <!-- Reporte modelo5  -->
+        <record model="ir.action.report" id="report_rrhh5">
+			<field name="name">Reporte Periodo de Prueba Personal</field>
+            <field name="model">company.employee</field>   	<!-- Base Datos SQL  -->
+            <field name="report_name">rrhh.report5</field>   		<!-- Nombre Reporte  -->
+            <field name="report">rrhh/report/reporte5.ods</field>
+            <field name="style"></field>
+            <field name="extension"></field>
+            <field name="direct_print">False</field>
+        </record>
+        <record model="ir.action.keyword" id="print_keyword5">
+            <field name="keyword">form_print</field>
+            <field name="model">company.employee,-1</field>  <!-- 4 Opcion del Reporte  --> 
+            <field name="action" ref="report_rrhh5"/>
+        </record>    
+
+        <!-- Reporte modelo6  -->
+        <record model="ir.action.report" id="report_rrhh6">
+			<field name="name">Impresion Ficha Personal de Empleado</field>
+            <field name="model">company.employee</field>   	<!-- Base Datos SQL  -->
+            <field name="report_name">rrhh.report6</field>   		<!-- Nombre Reporte  -->
+            <field name="report">rrhh/report/reporte6.ods</field>
+            <field name="style"></field>
+            <field name="extension"></field>
+            <field name="direct_print">False</field>
+        </record>
+        <record model="ir.action.keyword" id="print_keyword6">
+            <field name="keyword">form_print</field>
+            <field name="model">company.employee,-1</field>  <!-- 4 Opcion del Reporte  --> 
+            <field name="action" ref="report_rrhh6"/>
+        </record>  
+    </data>
+</tryton>

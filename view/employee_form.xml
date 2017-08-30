@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<data>
+    <xpath
+        expr="/form/field[@name='party']"
+        position="replace">
+        <field name="party" view_ids="alpi_rrhh.party_view_tree4,alpi_rrhh.view_party_form4"/>
+            <label name="legajo"/>
+            <field name="legajo"/>
+            <label name="active"/>
+            <field name="active"/>
+    </xpath>
+    <xpath
+        expr="/form/field[@name='company']"
+        position="after">
+
+            <notebook>
+                <!-- 1 Solapa Personales -->
+                <page string="Personales" id="page_rrhh1"  col='4'>
+                    <group colspan="4" col="6" id="group_perso1">
+                        <field name="documents" height="130" yexpand="0" mode="form,tree" colspan="4"/>
+                        <field xfill="0" xexpand="1" name="photo" img_width="165" img_height="165" 
+                        height="165" width="165" widget="image"/>
+                    </group>
+
+                    <group colspan="4" col="6" id="group_perso1">
+                        <field name="nationality" width="10"/>
+                        <label name="date_nac"/>
+                        <field name="date_nac"/> 
+                        <label name="edad_emple"/>                        
+                        <field name="edad_emple"/> 
+                    </group>
+
+                    <separator string="" colspan="4" id="infoper2"/>
+                    <label name="cuil"/>
+                    <field name="cuil" readonly='1' width="10"/>
+                    <label name="sex"/>
+                    <field name="sex"  colspan='1'/> 
+                    <label name="marital_status"/>
+                    <field name="marital_status"  widget='selection' width="30"/>
+                    <label name="matri_prof"/>
+                    <field name="matri_prof"/>
+                    <label name="mala_praxi"/>
+                    <field name="mala_praxi"/> 
+                    <label name="libreta_sani"/>
+                    <field name="libreta_sani"/> 
+                    <label name="curso_mani"/>
+                    <field name="curso_mani"/>
+                    <label name="hepatitib"/>
+                    <field name="hepatitib"/>                    
+                    <label name="email1"/>
+                    <field name="email1"/> 
+                    <label name="email2"/>
+                    <field name="email2"/>                     
+                </page>
+                <!-- 2 Solapa Domicilio -->                
+                <page string="Domicilio" id="page_rrhh2" >
+                        <field name="party_addresses" mode="form,tree" colspan="4"
+                            view_ids="party.address_view_form,party.address_view_tree_sequence"/>
+                    <group colspan="6" col="2" id="group_domi3">                                            
+                        <label name="telefono"/>
+                        <field name="telefono"/> 
+                        <label name="celular"/>
+                        <field name="celular"/> 
+                        <label name="telefcontacto"/>
+                        <field name="telefcontacto"/>                         
+                    </group>
+                    <label name="google_maps_url"/>
+                    <field name="google_maps_url"/>                     
+                </page>
+                <!-- 3 Solapa Laborales -->                
+                <page string="Laborales" id="page_rrhh3" >
+                    <separator string="Informacion de Puesto/Destino de Empleado" colspan="4" id="flaboral"/>
+                    <group colspan="2" col="4" id="group_labo_1">
+                        <label name="edificio"/>
+                        <field name="edificio" widget='selection' width="50"/>
+                        <label name="contrato"/>
+                        <field name="contrato" widget='selection' width="50"/> 
+                        <label name="date_in"/>
+                        <field name="date_in"/>
+                        <label name="date_prueba"/>
+                        <field name="date_prueba"/>                    
+                    </group> 
+                    <separator string="Informacion del Baja de Empleado" colspan="4" id="flaboral"/>
+                    <group colspan="3" col="4" id="group_labo2">                     
+                        <label name="date_eg"/>
+                        <field name="date_eg"/>
+                        <label name="motivo_eg"/>
+                        <field name="motivo_eg"/>
+                        <label name="date_pr"/>
+                        <field name="date_pr"/>
+                        <label name="certi_serv"/>
+                        <field name="certi_serv"/>
+                        <label name="fecha_certi_serv"/>
+                        <field name="fecha_certi_serv"/>
+                        <label name="ret_certi_serv"/>
+                        <field name="ret_certi_serv"/>
+                        <field name="cs_photo1" img_width="170" img_height="170" 
+                        height="170" width="170" widget="image"/>                        
+                    </group>
+                </page>
+                <!-- 4 Solapa Agrupacion -->                
+                <page string="Agrupacion" id="page_rrhh4" >
+                    <separator string="Agrupacion / Funcion" colspan="4" id="fagrup1"/>
+                    <group colspan="4" col="4" id="group_agrup_1">
+                        <label name="ccosto"/>
+                        <field name="ccosto"/>
+                        <label name="categoria"/>
+                        <field name="categoria"/>
+                        <label name="puesto"/>
+                        <field name="puesto"/>
+                        <label name="convenio"/>
+                        <field name="convenio"/>
+                        <label name="sueldo"/>
+                        <field name="sueldo"/>
+                        <label name="tliqui"/>
+                        <field name="tliqui" widget='selection' width="20"/>
+                    </group>
+                    <separator string="Definicion Horarios" colspan="4" id="fagrup2"/>                    
+                    <group colspan="1" col="1" id="group_agrup_2">                     
+                        <field name="horariosleg" colspan='2'/>
+                    </group>
+                </page>
+                <!-- 5 Solapa  Cobertura -->                
+                <page string="Cobertura" id="page_rrhh5" >
+                    <group colspan="6" col="2" id="group_cobertura_1">
+                        <label name="tipojub"/>
+                        <field name="tipojub" widget='selection' width="50"/>
+                        <label name="cuil"/>
+                        <field name="cuil" readonly='1'/> 
+                    </group> 
+                    <field name="obrasoci" colspan='4' />
+                    <field name="sindicato" colspan='4'/>
+                </page>
+                <!-- 6 Solapa  Forma de Pago -->                
+                <page string="Forma de Pago" id="page_rrhh6" >
+                    <label name="formapago"/>
+                    <field name="formapago" widget='selection' width="50"/>
+                    <group colspan="6" col="4" id="group_pago1">
+                        <separator string="Definicion de Banco 1" colspan="4" id="bank1"/>
+                        <label name="bank"/>
+                        <field name="bank" widget='selection' width="50"/>
+                        <label name="bank_suc"/>
+                        <field name="bank_suc"/> 
+                        <label name="bank_caja"/>
+                        <field name="bank_caja"/> 
+                        <separator string="Definicion de Banco 2" colspan="4" id="bank2"/>
+                        <label name="bank2"/>
+                        <field name="bank2" widget='selection' width="50"/>
+                        <label name="bank_suc2"/>
+                        <field name="bank_suc2"/> 
+                        <label name="bank_caja2"/>
+                        <field name="bank_caja2"/>
+                        <separator string="Definicion de Banco 3" colspan="4" id="bank3"/>
+                        <label name="bank3"/>
+                        <field name="bank3" widget='selection' width="50"/>
+                        <label name="bank_suc3"/>
+                        <field name="bank_suc3"/> 
+                        <label name="bank_caja3"/>
+                        <field name="bank_caja3"/>                         
+                    </group> 
+                </page>                                                                
+                <!-- 7 Solapa Indumentaria -->                
+                <page string="Indumentaria" id="page_rrhh7" >
+                    <field name="Indumentar" colspan='2'/>
+                </page> 
+                <!-- 8 Solapa Familiares -->                
+                <page string="Familiares" id="page_rrhh8" >
+                    <field name="familiar" colspan='4'/>
+                </page> 
+                <!-- 9 Solapa  Vacaciones -->
+                <page string="Vacaciones" id="page_rrhh9" >
+                    <group colspan="2" col="2" id="group_vaca">
+                        <label name="date_in"/>
+                        <field name="date_in" readonly='1'/>
+                        <label name="dias_equi"/>
+                        <field name="dias_equi"/>
+                        <label name="dias_antig"/>
+                        <field name="dias_antig"/>
+                    </group> 
+                    <group colspan="4" col="4" id="group_vaca2">
+                        <field name="curvac" colspan='6'/>
+                    </group>                     
+                </page>                 
+                <!-- 10 Solapa Cursos y Capacitacion  -->                
+                <page string="Cursos y Capacitacion" id="page_rrhh10" >
+                    <group colspan="4" col="4" id="group_oficio_1">
+                        <field name="curcap" colspan='6'/>
+                    </group> 
+                    <group string="Imagenes de Titulos y  Certificados" id="person1_picture">
+                        <field name="photo1" widget="image" width="170" height="170" 
+                        img_width="170" img_height="170" /> 
+                        <field name="photo2" widget="image" width="170" height="170" 
+                        img_width="170" img_height="170" /> 
+                        <field name="photo3" widget="image" width="170" height="170" 
+                        img_width="170" img_height="170" /> 
+                        <field name="photo4" widget="image" width="170" height="170" 
+                        img_width="170" img_height="170" />                         
+                    </group>
+                </page> 
+                <!-- 11 Solapa Cursor y Capacitacion  --> 
+                <page string="Oficion y C.Documento" id="page_rrhh11" >
+                    <field name="ofdocu" colspan='6'/>
+                </page>
+            </notebook>
+            
+    </xpath>
+</data>

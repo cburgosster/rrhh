@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="Registro de Categorias" col="2">
+    <label name="cod_ca"/>
+    <field name="cod_ca"/>
+    <label name="categoria"/>
+    <field name="categoria"/>    
+</form>

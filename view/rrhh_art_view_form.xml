@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<form>
+    <label name="name"/>
+    <field name="name"/>
+    <label name="siniestro"/>
+    <field name="siniestro"/>
+    <label name="legajo"/>
+    <field name="legajo"/>
+    <label name="ingreso"/>
+    <field name="ingreso"/>
+    <label name="dias_acc"/>
+    <field name="dias_acc"/>
+    
+    <notebook>
+        <page string="Informacion del Siniestro" id="page_art1" >
+            <separator string="Analisis del Accidentado" colspan="4" id="art2"/>
+            <group colspan="4" col="4" id="group_art_2">
+                <label name="fechaacc"/>
+                <field name="fechaacc"/>
+                <label name="informo"/>
+                <field name="informo"/>
+                <label name="testigo1"/>
+                <field name="testigo1"/>
+                <label name="testigo2"/>
+                <field name="testigo2"/>
+                <label name="tipoacc"/>
+                <field name="tipoacc"  widget='selection' width="30"/>
+                <label name="hospital"/>
+                <field name="hospital"/>
+                <label name="refacc"/>
+                <field name="refacc"/>
+                <label name="causa"/>
+                <field name="causa"/>
+                <label name="medida"/>
+                <field name="medida"/>
+                <label name="observ"/>
+                <field name="observ"/>
+                <label name="telefalter"/>
+                <field name="telefalter"/>                
+                <label name="fechaalta"/>
+                <field name="fechaalta"/>
+            </group>
+        </page>
+        <page string="Evolucion del Accidentado" id="page_art2" >
+            <field name="evolucion" colspan='4'/>
+        </page>
+        <page string="Insercion de Imagenes" id="page_art3" col="4">
+            <separator string="Imagenes de Justificacion de Accidente" colspan="4" id="separator2"/>
+            <field xfill="0" xexpand="1" name="seguroart_photo1" img_width="170" img_height="170" 
+            height="170" width="170" widget="image"/>
+            <field xfill="0" xexpand="1" name="seguroart_photo2" img_width="170" img_height="170" 
+            height="170" width="170" widget="image"/>
+            <field xfill="0" xexpand="1" name="seguroart_photo3" img_width="170" img_height="170" 
+            height="170" width="170" widget="image"/>
+         </page>
+    </notebook>
+</form>
+

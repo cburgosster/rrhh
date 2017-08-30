@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<form>
+    <separator string="Actualizacion Horario de EMpleado" colspan="4" id="fagrup"/>
+        <separator string="Definicion de horario" colspan="4" id="horgrup"/>
+        <label name="tip_tur"/>
+        <field name="tip_tur"/>
+        <group colspan="6" col="2" id="group_horario_1">        
+            <label name="entrada"/>
+            <field name="entrada"/>
+            <label name="salida"/>
+            <field name="salida"/>
+        </group> 
+</form>
